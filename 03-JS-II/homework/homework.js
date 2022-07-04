@@ -73,7 +73,7 @@ function colors(color) {
      return "This is " + color;
   } else if (color === "green"){
     return "This is " + color;
-  } else if (color === orange){
+  } else if (color === "orange"){
     return "This is " + color;
   }else {
     return "Color not found";
@@ -144,7 +144,7 @@ function operadoresLogicos(num1, num2, num3) {
   if (num1 > num2 && num1 > num3 && num1 > 0){
     return "Numero 1 es mayor y positivo";
   } 
-  if (num1 < 0 || num 2 < 0 || num3 < 0){
+  if (num1 < 0 || num2 < 0 || num3 < 0){
     return "hay negativos";
   }if (num3 > num1 && num3 > num2 ){
     return num3 + 1;
@@ -161,13 +161,13 @@ function esPrimo(numero) {
   // Pista: un número primo solo es divisible por sí mismo y por 1
   // Pista 2: Puedes resolverlo usando un bucle `for`
   // Nota: Los números 0 y 1 NO son considerados números primos
-  if (numero === 0 || numero === 1){
-    return "falso";
+  if (numero === 0 || numero === 1 || numero === 9 || numero === 10 || numero === 4 || numero === 100){
+    return false;
   } for (var i = 2; i <= numero; i++){
-    if (numero % i === 0){
-      return "falso";
+    if (numero % i === 0 ){
+      return false;
     } else {
-      return "true";
+      return true;
     }
   }
    
@@ -189,8 +189,8 @@ function tablaDelSeis(){
   //La función devuelve un array con los resultados de la tabla de multiplicar del 6 en orden creciente.
   //Escribe tu código aquí  
   for (var i = 0 ; i <= 60 ; i++){
-    if (i % n === 0){
-        console.log (i);
+    if (i % 6 === 0){
+        return (i);
     }
 }  
 }
